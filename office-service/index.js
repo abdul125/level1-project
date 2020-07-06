@@ -1,5 +1,6 @@
 var express = require("express");
 var app = express();
+const port = 8084; 
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -32,7 +33,7 @@ app.get("/office", (req, res) => {
     ]);
 });
 
-app.listen(80, () => {
-    console.log("Offices service running on port 80");
+app.listen(port, () => {
+    console.log("Offices service running on port " + port);
 });
 
