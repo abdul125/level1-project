@@ -1,6 +1,6 @@
 var express = require("express");
 var app = express();
-
+const port = 8083;
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -28,7 +28,7 @@ app.get("/department", (req, res) => {
     ]);
 });
 
-app.listen(80, () => {
-    console.log("Departments service running on port 80");
+app.listen(port, () => {
+    console.log("Departments service running on port " + port);
 });
 
