@@ -2,7 +2,7 @@ FROM maven:3.6.3-adoptopenjdk-11
 
 COPY . /person-service
 
-WORKDIR /person-service
+WORKDIR ./person-service
 
 RUN mvn clean package
 

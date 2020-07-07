@@ -12,5 +12,5 @@ build:
 
 
 clean:
-	docker rm -f $(docker ps -qa)
+	docker rm -f $$(docker ps -qa)
 
