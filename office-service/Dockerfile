@@ -9,7 +9,7 @@ COPY . /delta-level1-project
 
 RUN npm install
 
-EXPOSE 84
+EXPOSE 80
 
 #ENTRYPOINT ["node"]
 

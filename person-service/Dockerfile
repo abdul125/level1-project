@@ -1,18 +1,12 @@
-from bryandollery/maven-repo as build
+FROM maven:3.6.3-adoptopenjdk-11
 
-arg rebuild
+COPY . /person-service
 
-run git clone https://github.com/abdul125/level1-project.git && \
-    cd ~/Project1_Delta/level1-project/person-service && \
-    mvn clean package -DskipTests
+WORKDIR /person-service
 
-from adoptopenjdk/openjdk11:alpine
+RUN mvn clean package
 
-#copy --from=build /root/spring-petclinic-rest/target/spring-petclinic-rest-2.3.0.jar /
-#mvn spring-boot:run
+CMD ["java", "-jar", "target/person-service-1.0.0.jar"]
 
+EXPOSE 80
 
-#cmd ["java", "-Dspring.profiles.active=postgresql", "-Dspring.datasource.url=jdbc:postgresql://petclinic-db:5432/petclinic", "-jar", "spring-petclinic-rest-2.3.0.jar"]
-
-cmd ["mvn", "spring-boot:run"]
-expose 81
