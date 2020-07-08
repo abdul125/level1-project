@@ -9,7 +9,7 @@ build:
 	sudo docker build -t department_image ./department-service
 	
 run:	
-	sudo docker run -it --rm -d -p 80:80 main_image
+	docker run -it --rm -d -p 80:80 main_image
 	sudo docker run -it --rm -d -p 8081:80 person_image 
 	sudo docker run -it --rm -d -p 8082:80 role_image 
 	sudo docker run -it --rm -d -p 8083:80 department_image
