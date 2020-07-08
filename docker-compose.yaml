@@ -18,9 +18,6 @@ services:
     build: ./person-service
     ports: 
       - "8081:80"
-        #    depends_on:
-            #      - project-assessment
- 
   role-service:
     container_name: role-service
     image: role_image
