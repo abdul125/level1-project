@@ -1,5 +1,6 @@
 #! /bin/bash
 sudo apt update
+sudo apt install make 
 sudo apt install curl vim jq
 sudo apt-get update 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
