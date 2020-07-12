@@ -20,4 +20,4 @@ clean:
 	sudo docker rm project-assessment
 
 curl:
-	curl -sS http://ec2-157-175-62-126.me-south-1.compute.amazonaws.com:80 
+	curl -sS localhost:80 

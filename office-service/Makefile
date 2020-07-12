@@ -20,5 +20,5 @@ clean:
 	sudo docker rm office-service
 
 curl:
-	curl -sS http://ec2-157-175-62-126.me-south-1.compute.amazonaws.com:8084/office | jq '.' 
+	curl -sS localhost:8084/office | jq '.' 
 

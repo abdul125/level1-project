@@ -20,4 +20,4 @@ clean:
 	sudo docker rm role-service
 
 curl:
-	curl -sS http://ec2-157-175-62-126.me-south-1.compute.amazonaws.com:8082/role | jq '.' 
+	curl -sS localhost:8082/role/ | jq '.'

@@ -20,4 +20,4 @@ clean:
 	sudo docker rm person-service
 
 curl:
-	curl -sS http://ec2-157-175-62-126.me-south-1.compute.amazonaws.com:8081/person | jq '.' 
+	curl -sS localhost:8081/person/ | jq '.' 

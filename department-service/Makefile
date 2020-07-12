@@ -19,5 +19,6 @@ stop:
 clean:
 	sudo docker rm department-service
 
-curl:
-	curl -sS http://ec2-157-175-62-126.me-south-1.compute.amazonaws.com:8083/department | jq '.' 
+curl:	
+	curl -sS localhost:8083/department | jq '.'
+	#curl -sS http://ec2-157-175-62-126.me-south-1.compute.amazonaws.com:8083/department | jq '.' its gonna work only in this instance
